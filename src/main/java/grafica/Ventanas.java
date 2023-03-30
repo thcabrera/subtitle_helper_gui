@@ -39,14 +39,12 @@ public class Ventanas extends JFrame {
 	    }catch(Exception ex) {
 	        ex.printStackTrace();
 	    }
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ventanas frame = new Ventanas();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+		EventQueue.invokeLater(() -> {
+			try {
+				Ventanas frame = new Ventanas();
+				frame.setVisible(true);
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 		});
 	}
